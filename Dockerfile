@@ -14,7 +14,7 @@ ENV ZEO_CLIENT false
 # - multi_db_instance
 # - single_db_worker
 
-ENV PLONE_APP_ASYNC single_db_instance
+ENV PLONE_APP_ASYNC single_db_worker
 
 #
 # Setup
@@ -27,3 +27,6 @@ COPY src/base.cfg               $ZOPE_HOME/
 # Install
 #
 RUN ./install.sh
+
+VOLUME $ZOPE_HOME/var/downloads/pdf
+VOLUME $ZOPE_HOME/var/downloads/tmp
