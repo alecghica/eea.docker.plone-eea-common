@@ -30,3 +30,10 @@ RUN ./install.sh
 
 VOLUME $ZOPE_HOME/var/downloads/pdf
 VOLUME $ZOPE_HOME/var/downloads/tmp
+
+#
+# Update
+#
+RUN curl -o update.sh -k https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/updates.sh && \
+    chmod +x update.sh && \
+    ./update.sh
