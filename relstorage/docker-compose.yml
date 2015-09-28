@@ -1,5 +1,5 @@
 plone:
-  image: plone-eea-common
+  image: eeacms/plone-eea-common
   ports:
   - "8081:80"
   links:
