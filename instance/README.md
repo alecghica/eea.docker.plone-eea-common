@@ -36,7 +36,7 @@ See more at [eeacms/plone](https://github.com/eea/eea.docker.plone)
 
 ### Run w/ ZEO
 
-[Plone w/ EEA Add-ons Docker image used as a ZEO client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/zeo/README.md)
+[Plone w/ EEA Add-ons Docker image used as a ZEO client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/zeoclient/README.md)
 
 
 ### Run w/ RelStorage
