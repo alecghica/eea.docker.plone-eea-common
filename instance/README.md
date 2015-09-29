@@ -1,6 +1,7 @@
 # Plone w/ EEA Add-ons ready to run Docker image
 
-Docker image for Plone with EEA Common Add-ons available.
+Docker image for Plone with EEA Common Add-ons available based on
+[EEA Common Plone Buildout](https://github.com/eea/eea.plonebuildout.core)
 
 This image is generic, thus you can obviously re-use it within
 your non-related EEA projects.
@@ -11,11 +12,11 @@ your non-related EEA projects.
 
 ### Base docker image
 
- - [hub.docker.com](https://registry.hub.docker.com/u/eeacms/plone-eea-common)
+ - [hub.docker.com](https://registry.hub.docker.com/r/eeacms/plone-eea-common)
 
 ### Source code
 
-  - [github.com](http://github.com/eea/eea.docker.plone.addons)
+  - [github.com](http://github.com/eea/eea.docker.plone-eea-common)
 
 ### Installation
 
@@ -25,7 +26,23 @@ your non-related EEA projects.
 
 ## Usage
 
-See [eeacms/plone-instance](https://registry.hub.docker.com/u/eeacms/plone-instance)
+See more at [eeacms/plone](https://github.com/eea/eea.docker.plone)
+
+
+### Run w/ basic configuration
+
+    $ docker run -p 8080:80 eeacms/plone-eea-common
+
+
+### Run w/ ZEO
+
+[Plone w/ EEA Add-ons Docker image used as a ZEO client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/zeo/README.md)
+
+
+### Run w/ RelStorage
+
+[Plone w/ EEA Add-ons Docker image used as a RelStorage client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/relstorage/README.md)
+
 
 ## Upgrade
 
