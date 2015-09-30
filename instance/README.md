@@ -12,7 +12,7 @@ your non-related EEA projects.
 
 ### Base docker image
 
- - [hub.docker.com](https://registry.hub.docker.com/r/eeacms/plone-eea-common)
+ - [hub.docker.com](https://hub.docker.com/r/eeacms/plone-eea-common/)
 
 ### Source code
 
