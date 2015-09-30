@@ -1,0 +1,15 @@
+plone:
+  image: eeacms/plone-eea-common
+  ports:
+  - "8080:80"
+  volumes:
+  - src:/opt/zope/src
+  environment:
+  - AUTO_CHECKOUT=*
+#
+### Or you can add your own packages
+#
+# - AUTO_CHECKOUT=my.package my.theme
+# - SOURCE_MY_PACKAGE=git git@github.com:me/my.package.git
+# - SOURCE_MY_THEME=git git@github.com:me/my.theme.git
+#

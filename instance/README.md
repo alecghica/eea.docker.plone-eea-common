@@ -21,32 +21,31 @@ your non-related EEA projects.
 ### Installation
 
 1. Install [Docker](https://www.docker.com/)
-
 2. Install [Docker Compose](https://docs.docker.com/compose/) (optional)
 
 ## Usage
 
-See more at [eeacms/plone](https://github.com/eea/eea.docker.plone)
-
-
-### Run w/ basic configuration
-
     $ docker run -p 8080:80 eeacms/plone-eea-common
 
+See more at [eeacms/plone](https://github.com/eea/eea.docker.plone)
 
-### Run w/ ZEO
+Also you can also run this image as:
 
-[Plone w/ EEA Add-ons Docker image used as a ZEO client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/zeoclient/README.md)
+* [ZEO client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/zeoclient/README.md)
+* [RelStorage/PostgreSQL client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/relstorage/README.md)
+* [Development mode](https://github.com/eea/eea.docker.plone-eea-common/tree/master/develop/README.md)
 
+## Persistent data as you wish
 
-### Run w/ RelStorage
-
-[Plone w/ EEA Add-ons Docker image used as a RelStorage client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/relstorage/README.md)
+* [Plone: Persistent data as you wish](https://github.com/eea/eea.docker.plone#persistent-data-as-you-wish)
+* [ZEO: Persistent data as you wish](https://github.com/eea/eea.docker.zeoserver#persistent-data-as-you-wish)
+* [RelStorage: Persistent data as you wish](https://github.com/eea/eea.docker.postgres#persistent-data-as-you-wish)
 
 
 ## Upgrade
 
     $ docker pull eeacms/plone-eea-common
+
 
 ## Copyright and license
 
