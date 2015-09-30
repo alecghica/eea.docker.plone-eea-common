@@ -35,17 +35,15 @@ Also you can also run this image as:
 * [RelStorage/PostgreSQL client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/relstorage/README.md)
 * [Development mode](https://github.com/eea/eea.docker.plone-eea-common/tree/master/develop/README.md)
 
-## Persistent data as you wish
+## Persist/Migrate data
 
 * [Plone: Persistent data as you wish](https://github.com/eea/eea.docker.plone#persistent-data-as-you-wish)
 * [ZEO: Persistent data as you wish](https://github.com/eea/eea.docker.zeoserver#persistent-data-as-you-wish)
 * [RelStorage: Persistent data as you wish](https://github.com/eea/eea.docker.postgres#persistent-data-as-you-wish)
 
-
 ## Upgrade
 
     $ docker pull eeacms/plone-eea-common
-
 
 ## Copyright and license
 
