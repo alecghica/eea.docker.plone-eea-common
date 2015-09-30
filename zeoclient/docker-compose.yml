@@ -28,6 +28,8 @@ async:
 
 zeoserver:
   image: eeacms/zeoserver
+  volumes_from:
+  - data
 
 memcached:
   image: eeacms/memcached
@@ -42,5 +44,6 @@ postfix:
 data:
   image: busybox
   volumes:
-  - /opt/zeoserver
-  command: chown -R 500:500 /opt/zeoserver
+  - /opt/zeoserver/var/filestorage
+  - /opt/zeoserver/var/blobstorage
+  command: chown -R 500:500 /opt/zeoserver/var
