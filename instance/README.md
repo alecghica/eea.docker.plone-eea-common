@@ -35,6 +35,42 @@ Also you can also run this image as:
 * [RelStorage/PostgreSQL client](https://github.com/eea/eea.docker.plone-eea-common/tree/master/relstorage/README.md)
 * [Development mode](https://github.com/eea/eea.docker.plone-eea-common/tree/master/develop/README.md)
 
+### Extend the image with custom buildout configuration files
+
+For this you have the possibility to override:
+
+* `versions.cfg` - provide your custom Plone and Add-ons versions
+* `sources.cfg`  - provide un-released Plone Add-ons
+* `base.cfg`     - customize everything
+
+Below is an example of `base.cfg` and `Dockerfile` to build a custom version
+of Plone with your custom versions of packages based on this image:
+
+**base.cfg**:
+
+    [buildout]
+    extends = eea.cfg
+
+    [instance]
+    eggs +=
+      land.copernicus.theme
+      land.copernicus.content
+
+**Dockerfile**:
+
+    FROM eeacms/plone-eea-common:5.2
+
+    COPY base.cfg /opt/zope/base.cfg
+    RUN ./install.sh
+
+and then run
+
+    $ docker build -t plone-eea-copernicus:5.2 .
+
+In the same way you can provide custom `sources.cfg` and `versions.cfg` or all of
+them together.
+
+
 ## Persist/Migrate data
 
 * [Plone: Persistent data as you wish](https://github.com/eea/eea.docker.plone#persistent-data-as-you-wish)
