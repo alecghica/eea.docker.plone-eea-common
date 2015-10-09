@@ -58,14 +58,14 @@ of Plone with your custom versions of packages based on this image:
 
 **Dockerfile**:
 
-    FROM eeacms/plone-eea-common:5.2
+    FROM eeacms/plone-eea-common:5.1
 
     COPY base.cfg /opt/zope/base.cfg
     RUN ./install.sh
 
 and then run
 
-    $ docker build -t plone-eea-copernicus:5.2 .
+    $ docker build -t plone-eea-copernicus:5.1 .
 
 In the same way you can provide custom `sources.cfg` and `versions.cfg` or all of
 them together.

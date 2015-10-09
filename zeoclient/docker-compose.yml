@@ -1,5 +1,5 @@
 plone:
-  image: eeacms/plone-eea-common:5.2
+  image: eeacms/plone-eea-common:5.1
   ports:
   - "8081:80"
   links:
@@ -13,7 +13,7 @@ plone:
   - ZEO_CLIENT=True
 
 async:
-  image: eeacms/plone-eea-common:5.2
+  image: eeacms/plone-eea-common:5.1
   ports:
   - "8082:80"
   links:

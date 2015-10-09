@@ -1,5 +1,5 @@
 plone:
-  image: eeacms/plone-eea-common:5.2
+  image: eeacms/plone-eea-common:5.1
   ports:
   - "8080:80"
   volumes:
