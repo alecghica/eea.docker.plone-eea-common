@@ -8,7 +8,7 @@ your non-related EEA projects.
 
 ### Supported tags and respective Dockerfile links
 
-  - `:latest` (default)
+  - [Tags](https://hub.docker.com/r/eeacms/plone-eea-common/tags/)
 
 ### Base docker image
 

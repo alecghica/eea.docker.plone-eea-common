@@ -19,8 +19,11 @@ ENV PLONE_APP_ASYNC single_db_worker
 #
 # Setup
 #
+ADD https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/updates.sh $ZOPE_HOME/update.sh
+ADD https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/buildout-configs/sources.cfg $ZOPE_HOME/
+ADD https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/buildout-configs/base-zope.cfg $ZOPE_HOME/plone.cfg
 COPY src/versions.cfg           $ZOPE_HOME/
-COPY src/sources.cfg            $ZOPE_HOME/
+COPY src/eea.cfg                $ZOPE_HOME/
 COPY src/base.cfg               $ZOPE_HOME/
 
 #
@@ -34,6 +37,4 @@ VOLUME $ZOPE_HOME/var/downloads/tmp
 #
 # Update
 #
-RUN curl -o update.sh -k https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/updates.sh && \
-    chmod +x update.sh && \
-    ./update.sh
+RUN chmod +x update.sh && ./update.sh
