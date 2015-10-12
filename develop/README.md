@@ -10,7 +10,7 @@ be able to test and develop your Plone add-ons using your favorite editor/IDE:
       ports:
       - "8080:80"
       volumes:
-      - src:/opt/zope/src
+      - ./src:/opt/zope/src
       environment:
       - AUTO_CHECKOUT=my.package my.theme
       - SOURCE_MY_PACKAGE=git git@github.com:me/my.package.git

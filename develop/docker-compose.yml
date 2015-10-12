@@ -3,7 +3,7 @@ plone:
   ports:
   - "8080:80"
   volumes:
-  - src:/opt/zope/src
+  - ./src:/opt/zope/src
   environment:
   - AUTO_CHECKOUT=*
 #
