@@ -81,6 +81,21 @@ them together.
 
     $ docker pull eeacms/plone-eea-common
 
+## Release new versions of this image
+
+    $ git clone git@github.com:eea/eea.docker.plone-eea-common.git
+    $ cd eea.docker.plone-eea-common
+    $ vim instance/src/versions.cfg
+
+    Replace latest_kgs with your version (e.g. 5.3)
+
+    $ git branch 5.3
+    $ git commit -a "Release 5.3"
+    $ git push origin 5.3
+
+Now go to https://hub.docker.com/r/eeacms/plone-eea-common > Build Settings and
+add a new tag (e.g. 5.3)
+
 ## Copyright and license
 
 The Initial Owner of the Original Code is European Environment Agency (EEA).
