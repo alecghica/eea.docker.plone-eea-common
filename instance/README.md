@@ -10,6 +10,10 @@ your non-related EEA projects.
 
   - [Tags](https://hub.docker.com/r/eeacms/plone-eea-common/tags/)
 
+These tags have nothing to do with Plone version. They refer to the
+[EEA KGS versions](https://github.com/eea/eea.plonebuildout.core/tree/master/buildout-configs/kgs).
+The used Plone version can be found within Dockerfile used to create this image.
+
 ### Base docker image
 
  - [hub.docker.com](https://hub.docker.com/r/eeacms/plone-eea-common/)
@@ -22,6 +26,11 @@ your non-related EEA projects.
 
 1. Install [Docker](https://www.docker.com/)
 2. Install [Docker Compose](https://docs.docker.com/compose/) (optional)
+
+### Versions
+
+* Plone 4.3.6
+* Zope  2.13.22
 
 ## Usage
 
