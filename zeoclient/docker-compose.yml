@@ -1,30 +1,23 @@
 plone:
-  image: eeacms/plone-eea-common:5.1
+  image: eeacms/plone-eea-common-zeoclient:5.1
   ports:
   - "8081:80"
   links:
   - zeoserver
   - memcached
   - postfix
-  volumes:
-  - buildout.cfg:/opt/zope/buildout.cfg
   environment:
   - PLONE_APP_ASYNC=single_db_instance
-  - ZEO_CLIENT=True
+  - BUILDOUT_REBUILD=true
 
 async:
-  image: eeacms/plone-eea-common:5.1
+  image: eeacms/plone-eea-common-zeoclient:5.1
   ports:
   - "8082:80"
   links:
   - zeoserver
   - memcached
   - postfix
-  volumes:
-  - buildout.cfg:/opt/zope/buildout.cfg
-  environment:
-  - PLONE_APP_ASYNC=single_db_worker
-  - ZEO_CLIENT=True
 
 zeoserver:
   image: eeacms/zeoserver
