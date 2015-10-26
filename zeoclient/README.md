@@ -2,9 +2,7 @@
 
 See
 [docker-compose.yml](https://github.com/eea/eea.docker.plone-eea-common/blob/master/zeoclient/docker-compose.yml)
-and
-[buildout.cfg](https://github.com/eea/eea.docker.plone-eea-common/blob/master/zeoclient/buildout.cfg)
-files for an example on how you should use
+file for an example on how you should use
 [eeacms/plone-eea-common](https://hub.docker.com/r/eeacms/plone-eea-common/)
 Docker image as a ZEO client.
 

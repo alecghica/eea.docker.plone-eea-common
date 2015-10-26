@@ -1,7 +1,9 @@
 plone:
-  image: eeacms/plone-eea-common-relstorage
+  build: .
+  ports:
+  - "8081:80"
   links:
-  - postgres
+  - zeoserver
   - memcached
   - postfix
   environment:
@@ -9,20 +11,16 @@ plone:
   - BUILDOUT_REBUILD=true
 
 async:
-  image: eeacms/plone-eea-common-relstorage
+  build: .
+  ports:
+  - "8082:80"
   links:
-  - postgres
+  - zeoserver
   - memcached
   - postfix
 
-postgres:
-  image: eeacms/postgres
-  environment:
-  - POSTGRES_DBNAME=datafs
-  - POSTGRES_DBUSER=zope
-  - POSTGRES_DBPASS=zope
-  - POSTGRES_USER=postgres
-  - POSTGRES_PASSWORD=secret
+zeoserver:
+  image: eeacms/zeoserver
   volumes_from:
   - data
 
@@ -39,5 +37,6 @@ postfix:
 data:
   image: busybox
   volumes:
-  - /var/lib/postgresql/data
-  command: chown -R 999:999 /var/lib/postgresql/data
+  - /opt/zeoserver/var/filestorage
+  - /opt/zeoserver/var/blobstorage
+  command: chown -R 500:500 /opt/zeoserver/var
