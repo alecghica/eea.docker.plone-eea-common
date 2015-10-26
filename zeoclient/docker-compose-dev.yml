@@ -1,5 +1,5 @@
 plone:
-  image: eeacms/plone-eea-common-zeoclient:5.2
+  build: .
   ports:
   - "8081:80"
   links:
@@ -11,7 +11,7 @@ plone:
   - BUILDOUT_REBUILD=true
 
 async:
-  image: eeacms/plone-eea-common-zeoclient:5.2
+  build: .
   ports:
   - "8082:80"
   links:

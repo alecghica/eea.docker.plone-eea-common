@@ -1,9 +1,9 @@
 plone:
-  image: eeacms/plone-eea-common-zeoclient:5.2
+  build: .
   ports:
   - "8081:80"
   links:
-  - zeoserver
+  - postgres
   - memcached
   - postfix
   environment:
@@ -11,16 +11,22 @@ plone:
   - BUILDOUT_REBUILD=true
 
 async:
-  image: eeacms/plone-eea-common-zeoclient:5.2
+  build: .
   ports:
   - "8082:80"
   links:
-  - zeoserver
+  - postgres
   - memcached
   - postfix
 
-zeoserver:
-  image: eeacms/zeoserver
+postgres:
+  image: eeacms/postgres
+  environment:
+  - POSTGRES_DBNAME=datafs
+  - POSTGRES_DBUSER=zope
+  - POSTGRES_DBPASS=zope
+  - POSTGRES_USER=postgres
+  - POSTGRES_PASSWORD=secret
   volumes_from:
   - data
 
@@ -37,6 +43,5 @@ postfix:
 data:
   image: busybox
   volumes:
-  - /opt/zeoserver/var/filestorage
-  - /opt/zeoserver/var/blobstorage
-  command: chown -R 500:500 /opt/zeoserver/var
+  - /var/lib/postgresql/data
+  command: chown -R 999:999 /var/lib/postgresql/data
