@@ -1,5 +1,5 @@
 plone:
-  image: eeacms/plone-eea-common-relstorage
+  image: eeacms/plone-eea-common-relstorage:5.3
   links:
   - postgres
   - memcached
@@ -9,7 +9,7 @@ plone:
   - BUILDOUT_REBUILD=true
 
 async:
-  image: eeacms/plone-eea-common-relstorage
+  image: eeacms/plone-eea-common-relstorage:5.3
   links:
   - postgres
   - memcached

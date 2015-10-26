@@ -1,5 +1,5 @@
 plone:
-  image: eeacms/plone-eea-common-zeoclient
+  image: eeacms/plone-eea-common-zeoclient:5.3
   links:
   - zeoserver
   - memcached
@@ -9,7 +9,7 @@ plone:
   - BUILDOUT_REBUILD=true
 
 async:
-  image: eeacms/plone-eea-common-zeoclient
+  image: eeacms/plone-eea-common-zeoclient:5.3
   links:
   - zeoserver
   - memcached
