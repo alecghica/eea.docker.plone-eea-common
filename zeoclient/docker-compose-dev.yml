@@ -6,9 +6,6 @@ plone:
   - zeoserver
   - memcached
   - postfix
-  environment:
-  - PLONE_APP_ASYNC=single_db_instance
-  - BUILDOUT_REBUILD=true
 
 async:
   build: .
@@ -18,6 +15,9 @@ async:
   - zeoserver
   - memcached
   - postfix
+  environment:
+  - PLONE_APP_ASYNC=single_db_worker
+  - BUILDOUT_REBUILD=true
 
 zeoserver:
   image: eeacms/zeoserver
