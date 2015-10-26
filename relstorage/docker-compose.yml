@@ -6,9 +6,6 @@ plone:
   - postgres
   - memcached
   - postfix
-  environment:
-  - PLONE_APP_ASYNC=single_db_instance
-  - BUILDOUT_REBUILD=true
 
 async:
 
@@ -19,6 +16,9 @@ async:
   - postgres
   - memcached
   - postfix
+  environment:
+  - PLONE_APP_ASYNC=single_db_worker
+  - BUILDOUT_REBUILD=true
 
 postgres:
   image: eeacms/postgres
