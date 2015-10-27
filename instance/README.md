@@ -39,9 +39,7 @@ Also you can also run this image as:
 
 For this you have the possibility to override:
 
-* `versions.cfg` - provide your custom Plone and Add-ons versions
-* `sources.cfg`  - provide un-released Plone Add-ons
-* `base.cfg`     - customize everything
+* `base.cfg`
 
 Below is an example of `base.cfg` and `Dockerfile` to build a custom version
 of Plone with your custom versions of packages based on this image:
@@ -51,10 +49,19 @@ of Plone with your custom versions of packages based on this image:
     [buildout]
     extends = eea.cfg
 
+    auto-checkout =
+      land.copernicus.content
+
     [instance]
     eggs +=
       land.copernicus.theme
       land.copernicus.content
+
+    [versions]
+    land.copernicus.theme = 1.7
+
+    [sources]
+    land.copernicus.content = git https://github.com/eea/land.copernicus.content.git
 
 **Dockerfile**:
 
@@ -66,9 +73,6 @@ of Plone with your custom versions of packages based on this image:
 and then run
 
     $ docker build -t plone-eea-copernicus:5.2 .
-
-In the same way you can provide custom `sources.cfg` and `versions.cfg` or all of
-them together.
 
 
 ## Persist/Migrate data

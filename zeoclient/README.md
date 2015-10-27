@@ -21,3 +21,6 @@ Docker image as a ZEO client.
     $ docker-compose rm -v plone async zeoserver memcached postfix
     $ docker-compose up -d --no-recreate
     $ docker-compose logs
+
+See [base image](https://github.com/eea/eea.docker.plone-eea-common#plone-w-eea-add-ons-ready-to-run-docker-image)
+for information about this image.
