@@ -1,12 +1,12 @@
 plone:
-  image: eeacms/plone-eea-common-zeoclient:5.4
+  image: eeacms/plone-eea-common-zeoclient:5.5
   links:
   - zeoserver
   - memcached
   - postfix
 
 async:
-  image: eeacms/plone-eea-common-zeoclient:5.4
+  image: eeacms/plone-eea-common-zeoclient:5.5
   links:
   - zeoserver
   - memcached

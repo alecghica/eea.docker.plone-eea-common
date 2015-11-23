@@ -1,4 +1,4 @@
-FROM eeacms/plone-eea-common:5.4
+FROM eeacms/plone-eea-common:5.5
 MAINTAINER "Alin Voinea" <alin.voinea@eaudeweb.ro>
 
 ENV PLONE_APP_ASYNC single_db_instance

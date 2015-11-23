@@ -74,14 +74,14 @@ of Plone with your custom versions of packages based on this image:
 
 **Dockerfile**:
 
-    FROM eeacms/plone-eea-common:5.4
+    FROM eeacms/plone-eea-common:5.5
 
     COPY base.cfg /opt/zope/base.cfg
     RUN ./install.sh
 
 and then run
 
-    $ docker build -t plone-eea-copernicus:5.4 .
+    $ docker build -t plone-eea-copernicus:5.5 .
 
 
 ## Persist/Migrate data
@@ -98,10 +98,10 @@ and then run
 
     $ git clone git@github.com:eea/eea.docker.plone-eea-common.git
     $ cd eea.docker.plone-eea-commo
-    $ git checkout 5.4
+    $ git checkout 5.5
     $ vim instance/src/versions.cfg
 
-    Replace 5.4 with your version (e.g. 5.5)
+    Replace 5.5 with your version (e.g. 5.6)
 
     $ git branch 5.5
     $ git commit -a "Release 5.5"
