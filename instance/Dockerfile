@@ -26,6 +26,8 @@ COPY src/versions.cfg           $ZOPE_HOME/
 COPY src/eea.cfg                $ZOPE_HOME/
 COPY src/base.cfg               $ZOPE_HOME/
 
+USER root
+
 #
 # Install
 #
@@ -38,3 +40,5 @@ VOLUME $ZOPE_HOME/var/downloads/tmp
 # Update
 #
 RUN chmod +x update.sh && ./update.sh
+
+USER zope-www
