@@ -8,7 +8,7 @@ be able to test and develop your Plone add-ons using your favorite editor/IDE:
     plone:
       image: eeacms/plone-eea-common
       ports:
-      - "8080:80"
+      - "8080:8080"
       volumes:
       - ./src:/opt/zope/src
       environment:
