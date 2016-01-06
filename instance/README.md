@@ -6,9 +6,18 @@ Docker image for Plone with EEA Common Add-ons available based on
 This image is generic, thus you can obviously re-use it within
 your non-related EEA projects.
 
+### Warning
+
+For security reasons, latest builds of this image run Plone on port **8080** instead
+of **80**. Please update your deployment accordingly.
+
 ### Supported tags and respective Dockerfile links
 
   - [Tags](https://hub.docker.com/r/eeacms/plone-eea-common/tags/)
+
+These tags have nothing to do with Plone version. They refer to the
+[EEA KGS versions](https://github.com/eea/eea.plonebuildout.core/tree/master/buildout-configs/kgs).
+The used Plone version can be found within Dockerfile used to create this image.
 
 ### Base docker image
 
@@ -23,9 +32,14 @@ your non-related EEA projects.
 1. Install [Docker](https://www.docker.com/)
 2. Install [Docker Compose](https://docs.docker.com/compose/) (optional)
 
+### Versions
+
+* Plone 4.3.6
+* Zope  2.13.22
+
 ## Usage
 
-    $ docker run -p 8080:80 eeacms/plone-eea-common
+    $ docker run -p 8080:8080 eeacms/plone-eea-common
 
 See more at [eeacms/plone](https://github.com/eea/eea.docker.plone)
 
@@ -84,6 +98,21 @@ and then run
 ## Upgrade
 
     $ docker pull eeacms/plone-eea-common
+
+## Release new versions of this image
+
+    $ git clone git@github.com:eea/eea.docker.plone-eea-common.git
+    $ cd eea.docker.plone-eea-common
+    $ vim instance/src/versions.cfg
+
+    Replace latest_kgs with your version (e.g. 5.3)
+
+    $ git branch 5.3
+    $ git commit -a "Release 5.3"
+    $ git push origin 5.3
+
+Now go to https://hub.docker.com/r/eeacms/plone-eea-common > Build Settings and
+add a new tag (e.g. 5.3)
 
 ## Copyright and license
 

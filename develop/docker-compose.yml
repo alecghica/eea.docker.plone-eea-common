@@ -1,9 +1,9 @@
 plone:
   image: eeacms/plone-eea-common:5.1
   ports:
-  - "8080:80"
+  - "8080:8080"
   volumes:
-  - src:/opt/zope/src
+  - ./src:/opt/zope/src
   environment:
   - AUTO_CHECKOUT=*
 #
