@@ -6,6 +6,11 @@ Docker image for Plone with EEA Common Add-ons available based on
 This image is generic, thus you can obviously re-use it within
 your non-related EEA projects.
 
+### Warning
+
+For security reasons, latest builds of this image run Plone on port **8080** instead
+of **80**. Please update your deployment accordingly.
+
 ### Supported tags and respective Dockerfile links
 
   - [Tags](https://hub.docker.com/r/eeacms/plone-eea-common/tags/)
@@ -34,7 +39,7 @@ The used Plone version can be found within Dockerfile used to create this image.
 
 ## Usage
 
-    $ docker run -p 8080:80 eeacms/plone-eea-common
+    $ docker run -p 8080:8080 eeacms/plone-eea-common
 
 See more at [eeacms/plone](https://github.com/eea/eea.docker.plone)
 
