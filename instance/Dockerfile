@@ -1,4 +1,4 @@
-FROM eeacms/plone:4.3.6
+FROM eeacms/plone:4.3.7
 MAINTAINER "Alin Voinea" <alin.voinea@eaudeweb.ro>
 
 # ZEO_CLIENT

@@ -34,8 +34,8 @@ The used Plone version can be found within Dockerfile used to create this image.
 
 ### Versions
 
-* Plone 4.3.6
-* Zope  2.13.22
+* Plone 4.3.7
+* Zope  2.13.23
 
 ## Usage
 
@@ -79,14 +79,14 @@ of Plone with your custom versions of packages based on this image:
 
 **Dockerfile**:
 
-    FROM eeacms/plone-eea-common:5.2
+    FROM eeacms/plone-eea-common:5.7
 
     COPY base.cfg /opt/zope/base.cfg
     RUN ./install.sh
 
 and then run
 
-    $ docker build -t plone-eea-copernicus:5.2 .
+    $ docker build -t plone-eea-copernicus:5.7 .
 
 
 ## Persist/Migrate data
@@ -105,14 +105,11 @@ and then run
     $ cd eea.docker.plone-eea-common
     $ vim instance/src/versions.cfg
 
-    Replace latest_kgs with your version (e.g. 5.3)
+    Replace latest_kgs with your version (e.g. 5.8)
 
-    $ git branch 5.3
-    $ git commit -a "Release 5.3"
-    $ git push origin 5.3
-
-Now go to https://hub.docker.com/r/eeacms/plone-eea-common > Build Settings and
-add a new tag (e.g. 5.3)
+    $ git branch 5.8
+    $ git commit -a "Release 5.8"
+    $ git push -u origin 5.8
 
 ## Copyright and license
 
