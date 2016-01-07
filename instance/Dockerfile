@@ -39,6 +39,7 @@ VOLUME $ZOPE_HOME/var/downloads/tmp
 #
 # Update
 #
-RUN chmod +x update.sh && ./update.sh
+RUN chmod +x update.sh
+RUN update.sh
 
 USER zope-www
