@@ -31,7 +31,7 @@ USER root
 #
 # Update
 #
-RUN chmod +x update.sh && ./update.sh
+RUN ./update.sh
 
 #
 # Install
