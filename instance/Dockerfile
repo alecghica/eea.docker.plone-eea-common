@@ -21,17 +21,17 @@ ENV PLONE_APP_ASYNC single_db_worker
 #
 ADD https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/buildout-configs/sources.cfg $ZOPE_HOME/
 ADD https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/buildout-configs/base-zope.cfg $ZOPE_HOME/plone.cfg
-ADD https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/updates.sh $ZOPE_HOME/
 COPY src/versions.cfg           $ZOPE_HOME/
 COPY src/eea.cfg                $ZOPE_HOME/
 COPY src/base.cfg               $ZOPE_HOME/
+COPY src/update.sh              $ZOPE_HOME/
 
 USER root
 
 #
 # Update
 #
-RUN chmod +x updates.sh && ./updates.sh
+RUN ./update.sh
 
 #
 # Install
