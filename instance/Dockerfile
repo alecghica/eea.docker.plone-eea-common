@@ -24,14 +24,14 @@ ADD https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/buildout
 COPY src/versions.cfg           $ZOPE_HOME/
 COPY src/eea.cfg                $ZOPE_HOME/
 COPY src/base.cfg               $ZOPE_HOME/
+COPY src/updates.sh             $ZOPE_HOME/
 
 USER root
 
 #
 # Update
 #
-RUN curl -o $ZOPE_HOME/update.sh https://raw.githubusercontent.com/eea/eea.plonebuildout.core/master/updates.sh
-RUN chmod +x update.sh && ./update.sh
+RUN ./updates.sh
 
 #
 # Install
