@@ -29,17 +29,16 @@ COPY src/base.cfg               $ZOPE_HOME/
 USER root
 
 #
+# Update
+#
+RUN chmod +x update.sh && ./update.sh
+
+#
 # Install
 #
 RUN ./install.sh
 
 VOLUME $ZOPE_HOME/var/downloads/pdf
 VOLUME $ZOPE_HOME/var/downloads/tmp
-
-#
-# Update
-#
-RUN chmod +x update.sh
-RUN update.sh
 
 USER zope-www
