@@ -1,4 +1,4 @@
-FROM eeacms/plone-eea-common:5.7
+FROM eeacms/plone-eea-common:5.8
 MAINTAINER "Alin Voinea" <alin.voinea@eaudeweb.ro>
 
 ENV ZEO_CLIENT true

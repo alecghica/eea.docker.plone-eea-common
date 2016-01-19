@@ -1,12 +1,12 @@
 plone:
-  image: eeacms/plone-eea-common-relstorage:5.7
+  image: eeacms/plone-eea-common-relstorage
   links:
   - postgres
   - memcached
   - postfix
 
 async:
-  image: eeacms/plone-eea-common-relstorage:5.7
+  image: eeacms/plone-eea-common-relstorage
   links:
   - postgres
   - memcached
