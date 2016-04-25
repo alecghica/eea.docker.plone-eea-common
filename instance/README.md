@@ -1,5 +1,13 @@
 # Plone w/ EEA Add-ons ready to run Docker image
 
+### Warning
+
+**DEPRECATED!** Please upgrade to [eeacms/kgs](https://hub.docker.com/r/eeacms/kgs/).
+
+See more under [EEA Plone KGS](https://github.com/eea/eea.docker.kgs).
+
+### Intro
+
 Docker image for Plone with EEA Common Add-ons available based on
 [EEA Common Plone Buildout](https://github.com/eea/eea.plonebuildout.core)
 
